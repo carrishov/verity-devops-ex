@@ -49,19 +49,19 @@ public class UserServiceTest {
 	public void saveUserTest() {
 		
 		User user = new User();
-		user.setUsername("SUN");
+		user.setUsername("Uth");
 		
 		when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
 		User created = userService.saveUser(user);
 		
-		assertThat(created.getUsername(), is("SUN"));	
+		assertThat(created.getUsername(), is("Uth"));	
 	}
 	
 	@Test
 	public void getAllUserTest() {	
 		
 		User user = new User();
-		user.setUsername("SUN");
+		user.setUsername("Uth");
 		user.setPassword("123");
 		when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
 		when(passwordEncoder.encode(Mockito.any(String.class))).thenReturn("123");
